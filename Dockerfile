@@ -11,7 +11,6 @@ ENV NODE_VERSION=8.10.0 \
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
-  && chmod 1777 /tmp \
   && buildDeps='xz-utils' \
     && ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && case "${dpkgArch##*-}" in \
